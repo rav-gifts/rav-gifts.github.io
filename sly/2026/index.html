@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>День Слизерина 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg:        #07130f;
+    --bg2:       #0b1e17;
+    --green:     #2a6b42;
+    --green2:    #3d9960;
+    --green3:    #5ec47e;
+    --silver:    #c2d8c8;
+    --silver2:   #e8f5ed;
+    --teal:      #1a4a3a;
+    --teal2:     #0e2e24;
+    --water:     #091a14;
+  }
+
+  html, body { height: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--silver2);
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── ANIMATED WATER BACKGROUND ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 20% 70%, rgba(30,100,60,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 80% 20%, rgba(10,60,40,0.15) 0%, transparent 55%),
+      radial-gradient(ellipse 100% 40% at 50% 100%, rgba(7,19,12,0.9) 0%, transparent 50%);
+    animation: bgDrift 18s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
+  @keyframes bgDrift {
+    0%   { transform: scale(1) translate(0,0); }
+    100% { transform: scale(1.03) translate(-1%, 1%); }
+  }
+
+
+
+  /* ── HEADER ── */
+  header {
+    position: relative;
+    z-index: 10;
+    padding: 2.8rem 2rem 1.4rem;
+    /* no bottom border — gradient carries into nav */
+    background: linear-gradient(to bottom, rgba(2,6,4,0.99) 0%, rgba(3,9,6,0.97) 100%);
+  }
+
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  .header-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--silver2);
+    /* restored glow */
+    text-shadow: 0 0 60px rgba(62,153,96,0.55), 0 0 120px rgba(62,153,96,0.25);
+    margin-bottom: 0.45rem;
+  }
+
+  .header-title em {
+    font-style: normal;
+    color: var(--green3);
+    text-shadow: 0 0 35px rgba(94,196,126,0.75), 0 0 70px rgba(94,196,126,0.35);
+  }
+
+  .header-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--silver);
+    opacity: 0.75;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    text-align: center;
+    padding: 0.85rem 2rem;
+    /* gradient: picks up where header ends, fades into page bg */
+    background: linear-gradient(
+      to bottom,
+      rgba(3,9,6,0.97)   0%,
+      rgba(5,13,9,0.95)  30%,
+      rgba(7,16,11,0.93) 60%,
+      rgba(7,19,12,0.92) 100%
+    );
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(62,153,96,0.28);
+    border-bottom: 1px solid rgba(62,153,96,0.28);
+  }
+
+  nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 3rem;
+  }
+
+  nav a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--silver);
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+  }
+
+  nav a:hover, nav a.active {
+    color: var(--green3);
+    text-shadow: 0 0 14px rgba(94,196,126,0.6);
+  }
+
+  /* ── MAIN ── */
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+  }
+
+  /* ── COLLAGE ── */
+  .collage {
+    position: relative;
+    width: 100%;
+    height: 260px;
+  }
+
+  .collage-stamp {
+    position: absolute;
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.75)) drop-shadow(0 0 10px rgba(42,107,66,0.2));
+    transition: filter 0.35s, transform 0.35s;
+    cursor: pointer;
+    transform-origin: center bottom;
+  }
+
+  .collage-stamp:hover {
+    filter: drop-shadow(0 10px 28px rgba(0,0,0,0.85)) drop-shadow(0 0 22px rgba(94,196,126,0.45));
+    z-index: 5;
+  }
+
+  /* positions & sizes */
+  .cs1 { width:130px; top:10%;  left:2%;   animation: sw1 5.5s ease-in-out infinite; }
+  .cs2 { width:108px; top:5%;   left:22%;  animation: sw2 6.8s ease-in-out infinite 0.8s; }
+  .cs3 { width:148px; top:8%;   left:38%;  animation: sw1 7.2s ease-in-out infinite 1.5s; }
+  .cs4 { width:115px; top:12%;  left:60%;  animation: sw3 5.8s ease-in-out infinite 0.4s; }
+  .cs5 { width:135px; top:4%;   left:76%;  animation: sw2 6.3s ease-in-out infinite 1.1s; }
+
+  @keyframes sw1 {
+    0%,100% { transform: rotate(-5deg) translateY(0); }
+    50%      { transform: rotate(-3deg) translateY(-9px); }
+  }
+  @keyframes sw2 {
+    0%,100% { transform: rotate(4deg) translateY(0); }
+    50%      { transform: rotate(6deg) translateY(-12px); }
+  }
+  @keyframes sw3 {
+    0%,100% { transform: rotate(-2deg) translateY(0); }
+    30%      { transform: rotate(1deg) translateY(-7px); }
+    70%      { transform: rotate(-3deg) translateY(-4px); }
+  }
+
+  /* reflection under collage */
+  .collage::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(7,19,12,0.6), transparent);
+    pointer-events: none;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    color: rgba(62,153,96,0.35);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+  }
+  .divider::before, .divider::after {
+    content:'';
+    flex:1;
+    height:1px;
+    background: linear-gradient(to right, transparent, rgba(62,153,96,0.28), transparent);
+  }
+
+  /* ── LETTER ── */
+  .letter {
+    width: 100%;
+    max-width: 680px;
+    padding: 2.2rem 2.8rem;
+    background: linear-gradient(135deg, rgba(11,30,23,0.85), rgba(7,19,12,0.92));
+    border: 1px solid rgba(62,153,96,0.22);
+    position: relative;
+  }
+
+  .letter::before {
+    content:'';
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(62,153,96,0.09);
+    pointer-events: none;
+  }
+
+  .letter-drop {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--green3);
+    text-shadow: 0 0 18px rgba(94,196,126,0.45);
+    display: block;
+    margin-bottom: 0.7em;
+  }
+
+  .letter-body {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--silver);
+    font-style: italic;
+  }
+
+  .letter-body p { margin-bottom: 0.7em; }
+  .letter-body p:last-child { margin-bottom: 0; }
+
+  /* ── CTA ── */
+  .cta {
+    display: inline-block;
+    padding: 0.85rem 2.8rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--green3);
+    border: 1px solid rgba(62,153,96,0.45);
+    text-decoration: none;
+    background: rgba(11,30,23,0.55);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s;
+  }
+
+  .cta::before {
+    content:'';
+    position: absolute;
+    inset:0;
+    background: rgba(62,153,96,0.1);
+    transform: translateX(-100%);
+    transition: transform 0.35s;
+  }
+
+  .cta:hover::before { transform: translateX(0); }
+  .cta:hover { border-color: var(--green3); box-shadow: 0 0 24px rgba(62,153,96,0.18); }
+
+  /* ── FOOTER ── */
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1.8rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    color: rgba(194,216,200,0.28);
+    border-top: 1px solid rgba(62,153,96,0.1);
+  }
+
+  /* ── RESPONSIVE ── */
+
+  /* Tablet (≤ 900px) */
+  @media (max-width: 900px) {
+    .header-inner { text-align: center; }
+    main { padding: 2rem 1.5rem 3rem; gap: 1.8rem; }
+    .letter { padding: 2rem 2rem; }
+  }
+
+  /* Large phone / small tablet (≤ 640px) */
+  @media (max-width: 640px) {
+    header { padding: 2rem 1.2rem 1.2rem; }
+    .header-title { font-size: clamp(1.35rem, 6vw, 1.9rem); }
+    .header-sub { font-size: 0.92rem; }
+
+    nav { padding: 0.75rem 1rem; }
+    nav ul { gap: 1.4rem; }
+    nav a { font-size: 0.66rem; letter-spacing: 0.15em; }
+
+    main { padding: 1.5rem 1rem 2.5rem; gap: 1.5rem; }
+
+    .collage { height: 200px; }
+    .cs1 { width: 90px; }
+    .cs2 { width: 76px; }
+    .cs3 { width: 105px; }
+    .cs4 { width: 82px; }
+    .cs5 { width: 95px; }
+
+    .letter { padding: 1.5rem 1.2rem; }
+    .letter-drop { font-size: 1.5rem; }
+    .letter-body { font-size: 0.97rem; }
+
+    .cta { padding: 0.8rem 2rem; font-size: 0.68rem; }
+
+    footer { font-size: 0.58rem; padding: 1.4rem 1rem; }
+  }
+
+  /* Small phone (≤ 400px) */
+  @media (max-width: 400px) {
+    .header-title { font-size: 1.25rem; }
+    nav ul { gap: 0.9rem; }
+    nav a { font-size: 0.6rem; }
+    .collage { height: 170px; }
+    .cs1 { width: 75px; }
+    .cs2 { width: 63px; }
+    .cs3 { width: 88px; }
+    .cs4 { width: 68px; }
+    .cs5 { width: 78px; }
+    .letter { padding: 1.2rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1 class="header-title">Все на дно! <em>Дно-о-о-о-оо!</em></h1>
+    <p class="header-sub">Подземное озеро хранит тайны — и теперь хранит марки.</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html" class="active">Главная</a></li>
+    <li><a href="stamps.html">Коллекция марок</a></li>
+    <li><a href="game.html">Сундук</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="collage">
+    <img class="collage-stamp cs1" src="https://s1.radikal.cloud/2026/04/03/s_VESTENDORF7fc7632b1bfe4455.png" alt="Марка">
+    <img class="collage-stamp cs2" src="https://s1.radikal.cloud/2026/04/03/s_VESTENDORF7fc7632b1bfe4455.png" alt="Марка">
+    <img class="collage-stamp cs3" src="https://s1.radikal.cloud/2026/04/03/s_VESTENDORF7fc7632b1bfe4455.png" alt="Марка">
+    <img class="collage-stamp cs4" src="https://s1.radikal.cloud/2026/04/03/s_VESTENDORF7fc7632b1bfe4455.png" alt="Марка">
+    <img class="collage-stamp cs5" src="https://s1.radikal.cloud/2026/04/03/s_VESTENDORF7fc7632b1bfe4455.png" alt="Марка">
+  </div>
+
+  <div class="divider">✦</div>
+
+  <div class="letter">
+    <span class="letter-drop">Дорогие слизеринцы!</span>
+    <div class="letter-body">
+      <p>Кто знает толк в сдержанной элегантности так, как знаете её вы? Там, где подземное озеро отражает зелёные огни и холодная вода хранит вековые тайны, — именно там рождается особый стиль.</p>
+      <p>В этот день мы, Когтевранцы, дарим вам лимитированную коллекцию марок, посвящённых вашему факультету. Каждая пропитана запахом холодного камня и серебра, добавляет +100 к таинственности и выглядит безупречно. Украшайте ими свои послания — пусть каждое письмо говорит о достоинстве и хладнокровии.</p>
+    </div>
+  </div>
+
+  <a href="stamps.html" class="cta">Открыть коллекцию</a>
+</main>
+
+<footer>© Подарок ко Дню Слизерина 2025 · С любовью от Когтеврана</footer>
+
+
+<style>
+  .ripple-ring {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    border: 1.5px solid transparent;
+    width: 0; height: 0;
+    animation: waterRipple var(--dur, 1.4s) cubic-bezier(0.15, 0.5, 0.4, 1) var(--delay, 0s) forwards;
+  }
+
+  @keyframes waterRipple {
+    0%   { width: 4px;  height: 2px;  opacity: 0.8;  border-width: 1.5px; }
+    40%  { opacity: 0.5; }
+    100% { width: var(--maxW, 220px); height: var(--maxH, 70px); opacity: 0; border-width: 0.5px; }
+  }
+</style>
+
+<script>
+  document.addEventListener('click', e => {
+    const count = 4;
+    for (let i = 0; i < count; i++) {
+      const ring = document.createElement('div');
+      ring.className = 'ripple-ring';
+      ring.style.left = e.clientX + 'px';
+      ring.style.top  = e.clientY + 'px';
+
+      const spread = 1 + i * 0.28;
+      const maxW = Math.round((100 + Math.random() * 40) * spread);
+      const maxH = Math.round(maxW * (0.28 + Math.random() * 0.08));
+      const dur  = (1.1 + i * 0.22 + Math.random() * 0.15).toFixed(2);
+      const delay = (i * 0.11).toFixed(2);
+
+      ring.style.setProperty('--maxW', maxW + 'px');
+      ring.style.setProperty('--maxH', maxH + 'px');
+      ring.style.setProperty('--dur',   dur  + 's');
+      ring.style.setProperty('--delay', delay + 's');
+
+      // slight opacity variation per ring
+      ring.style.borderColor = `rgba(94,196,126,${(0.65 - i * 0.12).toFixed(2)})`;
+
+      document.body.appendChild(ring);
+      ring.addEventListener('animationend', () => ring.remove(), { once: true });
+    }
+  });
+</script>
+</body>
+</html>
